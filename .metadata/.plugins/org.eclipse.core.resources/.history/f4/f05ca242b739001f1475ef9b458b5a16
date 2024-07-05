@@ -1,0 +1,18 @@
+package basic;
+
+public class variable2 {
+
+	int a; //필드, 이미 0으로 초기화 되어있음
+	
+	static int b;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int a= 100;  // 지역변수(local variable)
+		System.out.println(a);
+	
+		System.out.println("a = "+ a );
+	}
+
+}

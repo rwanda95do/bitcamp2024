@@ -1,0 +1,12 @@
+package basic;
+
+public class Compute {
+
+	public static void main(String[] args) {
+		
+		int a = 320, b=258;
+		
+
+	}
+
+}

@@ -1,0 +1,26 @@
+package basic;
+
+public class Compute {
+
+	public static void main(String[] args) {
+		//Q. 변수를 이용하여 a=320, b=258의 합(sum), 차(sub), 곱(mul), 몫)(div)를 구하시오
+		short a = 320, b=258;
+		
+		int sum, sub, mul;
+		float div;
+		
+		
+		sum = a + b;
+		sub = a - b;
+		mul = a * b;
+		div = a / b;
+		
+		
+		System.out.println(a + " + " + b + " = " + sum);
+		System.out.println(a + " - " + b + " = " + sub);
+		System.out.println(a + " * " + b + " = " + mul);
+		System.out.println(a + " / " + b + " = " + div);
+		
+	}
+
+}
