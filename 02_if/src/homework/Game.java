@@ -25,61 +25,70 @@ public class Game {
 		*/
 		
 		Scanner sc = new Scanner(System.in);
+		
 		System.out.print("가위(1), 바위(2), 보자기(3) 입력 ");
-		int MY = sc.nextInt();
-		int MyCost = 1000, GameCost = 600;
-		System.out.println("배팅금액 : " + GameCost);
+		int MY = sc.nextInt(); // 내가 내는 거 
+		int MyCost = 1000; // 내가 가지고 있는 금액
+		
+		System.out.print("배팅금액 : ");
+		int GameCost = sc.nextInt(); // 배팅금액 입력
 		
 		int COM = (int)(Math.random()*10)%3 +1;
 		
 		String winner ="";
 		//MyCost -= GameCost;
 		
-		
-		//가위바위보
-		if(MY==1) { // 내가 가위
-			switch(COM) {
+		if(GameCost>MyCost){
+			System.out.println("배팅금액이 소지금보다 커 게임을 진행할 수 없습니다.");
+		}else { // 배팅금이 소지금 보다 낮아서 게임 가능 
+			//가위바위보
+			if(MY==1) { // 내가 가위
+				switch(COM) {
 				case 1: winner = "무승부"; MyCost-=GameCost; break;
 				case 2: winner = "컴퓨터"; MyCost-=GameCost; break;
 				case 3: winner = "나"; MyCost+=GameCost; break;
 				default:
-			}
-		}else if(MY==2) { // 내가 바위
-			switch(COM) {
+				}
+			}else if(MY==2) { // 내가 바위
+				switch(COM) {
 				case 1: winner = "나"; MyCost+=GameCost; break;
 				case 2: winner = "무승부"; MyCost-=GameCost; break;
 				case 3: winner = "컴퓨터"; MyCost-=GameCost; break;
 				default:
-			}	
-		}else { // 내가 보
-			switch(COM) {
+				}	
+			}else { // 내가 보
+				switch(COM) {
 				case 1: winner = "컴퓨터"; MyCost-=GameCost; break;
 				case 2: winner = "나"; MyCost+=GameCost; break;
 				case 3: winner = "무승부"; MyCost-=GameCost; break;
 				default:
+				}
 			}
+			// 나와 컴의 결과를 한글로 보여주기
+			String MyR = "",ComR="";
+			switch(MY) {
+			case 1: MyR="가위";break;
+			case 2: MyR="바위";break;
+			case 3: MyR="보";break;
+			default:
+			}
+			switch(COM) {
+			case 1: ComR="가위";break;
+			case 2: ComR="바위";break;
+			case 3: ComR="보";break;
+			default:
+			}
+			
+			System.out.println("결과를 보시려면 ENTER을 치세요 ");
+			System.in.read();
+			
+			System.out.println("컴퓨터 : " + ComR + ", 나 : " + MyR );
+			System.out.println("승자 : " + winner);
 		}
-		
-		// 나와 컴의 결과를 한글로 보여주기
-		String MyR = "",ComR="";
-		switch(MY) {
-		case 1: MyR="가위";break;
-		case 2: MyR="바위";break;
-		case 3: MyR="보";break;
-		default:
-		}
-		switch(COM) {
-		case 1: ComR="가위";break;
-		case 2: ComR="바위";break;
-		case 3: ComR="보";break;
-		default:
-		}
-		
-		System.out.println("결과를 보시려면 ENTER을 치세요 ");
-		System.in.read();
-		
-		System.out.println("컴퓨터 : " + ComR + ", 나 : " + MyR );
-		System.out.println("승자 : " + winner);
 		System.out.println("현재 금액 : " + MyCost);
+		
+		
+		
+		
 	}
 }

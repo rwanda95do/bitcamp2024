@@ -14,7 +14,7 @@ public class Input {
 		int b = System.in.read();	// 1개의 문자 입력
 		
 		System.out.println();
-		System.out.println("a : " + a);
+		System.out.println("a : " + (char)a);
 		System.out.println("b : " + b);
 	}
 }
