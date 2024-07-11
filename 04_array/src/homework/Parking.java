@@ -86,6 +86,7 @@ public class Parking {
 				System.out.println("프로그램을 종료합니다.");
 				break LOOP;
 			default:
+				System.out.println("다시");
 			}
 		}while(true);
 
