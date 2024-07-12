@@ -78,23 +78,26 @@ public class MemberService {
 		String checkPhoneNumber=scan.next();
 		
 		for(int i=0; i<ar.length;i++) {
-			if(ar[i].getPhoneNumber().equals(checkPhoneNumber)) {
-				// 회원번호를 수정
-				System.out.println("수정할 이름 입력 : ");
-				ar[i].setName(scan.next());
-				System.out.println("수정할 나이 입력 : ");
-				ar[i].setAge(scan.nextInt());
-				System.out.println("수정할 핸드폰 입력 : ");
-				ar[i].setPhoneNumber(scan.next());
-				System.out.println("수정할 주소 입력 : ");
-				ar[i].setAdress(scan.next());	
-				break;
-			}else {
-				System.out.println("찾는 회원이 없습니다.");
-				break;
-			}
-		}
-	} // update()
+			if(ar[i] != null) {
+				if(ar[i].getPhoneNumber().equals(checkPhoneNumber)) {
+					// 회원번호를 수정
+					System.out.println("수정할 이름 입력 : ");
+					ar[i].setName(scan.next());
+					System.out.println("수정할 나이 입력 : ");
+					ar[i].setAge(scan.nextInt());
+					System.out.println("수정할 핸드폰 입력 : ");
+					ar[i].setPhoneNumber(scan.next());
+					System.out.println("수정할 주소 입력 : ");
+					ar[i].setAdress(scan.next());	
+					break;
+				}else {
+					System.out.println("찾는 회원이 없습니다.");
+					break;
+				}				
+				
+			} // IF : if(ar[i] != null)
+		} // FOR
+	} // CLASS: update()
 	
 	public void delete(){
 		System.out.print("핸드폰 번호 입력 : ");

@@ -1,7 +1,0 @@
-package swith_;
-
-public class Switch02 {
-	public static void main(String[] args) {
-		
-	}
-}
