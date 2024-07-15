@@ -40,12 +40,46 @@ ddccddbbddddatt
 치환 할 수 없습니다
 
 */
+
+
+// 결국.. 못 품... 
+// indexof("문자열",시작위치)
+
 public class StringReplace {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		
-		String string = "안녕하세요, 세계";
-		System.out.println((string.indexOf("세")));
+		System.out.print("문자열 입력 : ");
+		String inputStr = scan.next();
+		System.out.print("현재 문자열 입력 : ");
+		String targetStr = scan.next();
+		System.out.print("바꿀 문자열 입력 : ");
+		String chateStr = scan.next();
+		
+		
+	//	int a =inputStr.indexOf("aa", 0);
+	//	System.out.println(a);
+		
+		if(inputStr.length()<targetStr.length()) {
+			System.out.println("입력한 문자열의 크기 작습니다.");
+		} else {
+			int index = 0;
+			int count = 0; 
+			
+			while((index=inputStr.indexOf(targetStr, index)) != -1){
+				// index=-1, 찾을 값이 없다는 것을 의미
+				index += targetStr.length();
+				count ++;
+				
+				
+			} // WHILE
+			
+			System.out.println(inputStr.replace(targetStr, chateStr));
+			System.out.println(count + "개 치환");
+			
+			
+		} // IF-ELSE
+		
 		
 	}
 
