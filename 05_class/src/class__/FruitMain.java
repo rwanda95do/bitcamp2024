@@ -41,16 +41,20 @@ public class FruitMain {
 		fruit[1]= new Fruit("포도", 30, 25, 10);
 		fruit[2]= new Fruit("딸기", 25, 30, 90);
 		
-		for(int i=0; i<3;i++) {
-			fruit[i].calcTot();
-		}
+		
 		
 		// 출력 ------------
+		System.out.println("------------------------------------");
 		System.out.println("PUM\t JAN\t FEB\t MAR\t TOT");
-		for(int i=0; i<3;i++) {
-			fruit[i].display();	
+		System.out.println("------------------------------------");
+		
+		for(int i=0; i<fruit.length; i++) {
+			fruit[i].calcTot(); // 각 과일의 합계 구하기
+			fruit[i].display();
 		}
-		output();
+		System.out.println("------------------------------------");
+		Fruit.output();
+		
 		
 	}
 }
