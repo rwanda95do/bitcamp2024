@@ -23,8 +23,8 @@ public class SungJukInsert implements SungJuk{
 		
 		sungJukDTO.calc();
 		
-		
 		list.add(sungJukDTO);
+		
 		System.out.println("입력되었습니다.");
 		
 	}

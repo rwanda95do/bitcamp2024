@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
-    <fullyQualifiedTypeName name="class__.Method01"/>
-    <fullyQualifiedTypeName name="class__.Method02"/>
-    <fullyQualifiedTypeName name="class__.VarArgs"/>
-    <fullyQualifiedTypeName name="class__.Constructor01"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="class__.StringMain"/>
-    <fullyQualifiedTypeName name="class__.StringButterMain"/>
-    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
-    <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
-    <fullyQualifiedTypeName name="class__.ExamMain"/>
     <fullyQualifiedTypeName name="java.lang.System.LoggerFinder"/>
     <fullyQualifiedTypeName name="int"/>
     <fullyQualifiedTypeName name="class__.Exam"/>
@@ -48,16 +37,27 @@
     <fullyQualifiedTypeName name="java.lang.SuppressWarnings"/>
     <fullyQualifiedTypeName name="collection.PersonMain"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="collection.PersonDTO"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="sungJuk.SungJukInsert"/>
     <fullyQualifiedTypeName name="java.lang.Iterable"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="java.lang.Comparable"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="sungJuk.SungJuk"/>
     <fullyQualifiedTypeName name="sungJuk.SungJukSort"/>
+    <fullyQualifiedTypeName name="com.zoo.Zoo"/>
+    <fullyQualifiedTypeName name="com.apple.Apple"/>
+    <fullyQualifiedTypeName name="com.zoo.safari.Safari"/>
+    <fullyQualifiedTypeName name="inheritance.Test"/>
+    <fullyQualifiedTypeName name="sungJuk.SungJuk"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="javax.print.attribute.standard.OutputDeviceAssigned"/>
+    <fullyQualifiedTypeName name="nested.Outer"/>
+    <fullyQualifiedTypeName name="nested.Outer.Inner"/>
+    <fullyQualifiedTypeName name="nested.AbstractTest"/>
+    <fullyQualifiedTypeName name="nested.AbstractExam"/>
+    <fullyQualifiedTypeName name="collection.PersonDTO"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="sungJuk.SungJukDTO"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
 </qualifiedTypeNameHistroy>

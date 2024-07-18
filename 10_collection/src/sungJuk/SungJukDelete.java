@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 
+
 public class SungJukDelete implements SungJuk{
 
 	@Override
@@ -15,7 +16,7 @@ public class SungJukDelete implements SungJuk{
 		System.out.print("삭제할 이름 입력 : ");
 		String name = scan.next();
 		
-		
+	// 선생님은 Iterator 사용함 ---------
 		for(int i=0; i<list.size(); i++) {
 			if(list.get(i).getName().equals(name)) {
 				
@@ -25,7 +26,7 @@ public class SungJukDelete implements SungJuk{
 				count++;
 			} 			
 		} // for
-		
+	// -------------------------------	
 		if(count ==0) {
 			System.out.println("회원의 정보가 없습니다.");			
 		} else {

@@ -47,6 +47,7 @@ public class CalendarMain {
 	}
 // -------------------	
 	public void calc() {
+		// 시스템 날짜를 기준으로 생성
 		Calendar calendar = Calendar.getInstance();
 		
 		// set()을 이용해서 컴퓨터가 가져오는 날짜의 값을 내가 고정시켜버림

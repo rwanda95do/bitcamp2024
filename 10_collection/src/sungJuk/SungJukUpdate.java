@@ -14,12 +14,11 @@ public class SungJukUpdate implements SungJuk{
 		int no = scan.nextInt();
 		int ck=0;
 		
-		Iterator it = list.iterator();
 		for(SungJukDTO sungJukDTO : list) {
 			if(sungJukDTO.getNo() != no) {ck ++;}
 				
 			else {		
-				sungJukDTO.toString();
+				System.out.println(sungJukDTO);
 				
 				System.out.print("수정 할 이름 입력");
 				sungJukDTO.setName(scan.next());

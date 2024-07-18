@@ -1,10 +1,13 @@
 package sungJuk;
 
-public class SungJukDTO {
+public class SungJukDTO implements Comparable<SungJukDTO> {
 // ----------------------
 	private int no, kor, eng, math, tot;
 	private double avg;
 	private String name;
+	
+// 생성자 -----------------
+	public SungJukDTO() {}
 	
 // --GETTER & SETTER ----
 	public int getNo() {return no;}
@@ -27,14 +30,21 @@ public class SungJukDTO {
 	@Override
 	public String toString() {
 		return  no + "\t" + name +"\t" +kor + "\t" + eng + "\t" +math + "\t" +tot + "\t" 
-					+  avg;
-		// 형식 바꾸는거 Deci어쩌고 
+					+ String.format("%.2f", avg);
 	}
 	
 	
 	public void calc() {
 		tot = kor + eng + math;
 		avg = (double)tot/3;
+	}
+
+	@Override
+	public int compareTo(SungJukDTO sungJukDTO) {
+		// 총점으로 내림차순
+		if(this.tot > sungJukDTO.getTot()) return -1; 
+		else if(this.tot < sungJukDTO.getTot()) return 1; 
+		else return 0;
 	}
 
 }

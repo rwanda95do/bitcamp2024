@@ -3,6 +3,7 @@ package collection;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class PersonSort {
 	
@@ -47,5 +48,19 @@ public class PersonSort {
 			System.out.print(data + "     ");
 		}
 		
+	// 이름으로 내림차순 - 기준이 나이 오름차순 
+		Comparator<PersonDTO> com = new Comparator<PersonDTO>() {
+			
+			@Override
+			public int compare(PersonDTO p1, PersonDTO p2) {
+				
+				return p1.getName().compareTo(p2.getName()) * -1;
+			}
+		};
+		
+		Collections.sort(list, com);
+		for(PersonDTO data : list) {
+			System.out.print(data + "     ");
+		} 
 	}
 }
