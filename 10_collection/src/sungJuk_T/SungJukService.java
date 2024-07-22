@@ -14,14 +14,16 @@ public class SungJukService {
 		while(true) {
 			System.out.println();
 			System.out.println("-------------");
-            System.out.println("  1. 입력");
+            System.out.println("  1. 등록");
             System.out.println("  2. 출력");
-            System.out.println("  3. 수정");
-            System.out.println("  4. 삭제");
-            System.out.println("  5. 정렬");
-            System.out.println("  6. 끝");
+            System.out.println("  3. 파일 저장");
+            System.out.println("  4. 파일 읽기");
+            System.out.println("  5. 책 제목으로 오름차순");
+            System.out.println("  6. 책 제목으로 검색");
+            System.out.println("  7. 끝");
             System.out.println("-------------");
-            System.out.print("번호를 입력하세요 : ");
+            
+            System.out.print("번호 선택 : ");
             num = scan.nextInt();
             
             if(num==6) break;
