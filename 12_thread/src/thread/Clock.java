@@ -56,7 +56,7 @@ public class Clock extends Frame implements Runnable{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}	
+		}  // WHILE	
 	}
 	
 	// Call-Back 이라서 run()에서 직접 호출할 수가 없다 -> repaint()

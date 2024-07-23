@@ -17,7 +17,7 @@ public class SnackMain extends Thread{
 		SnackMain bb =new SnackMain("포카칩");
 		SnackMain cc =new SnackMain("수미칩");
 	
-		aa.setName("새우깡");
+		aa.setName("새우깡");  // 스레드 이름 부여 (이름 수정) 
 		bb.setName("포카칩");
 		cc.setName("수미칩");
 		
