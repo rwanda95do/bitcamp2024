@@ -3,12 +3,17 @@ package school.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
 public class SchoolMain {
 	Scanner scanner = new Scanner(System.in);
-	
+	String name;
+	String value;
+	int code;
+	int num;
+	String sql;
 // ===DB연결===============================================	
 	private String driver = "oracle.jdbc.driver.OracleDriver";
 	private Connection con;
@@ -17,6 +22,7 @@ public class SchoolMain {
 	private String password = "1234";
 	
 	PreparedStatement pstmt;
+	ResultSet rs;
 	// 1. 생성자
 	public SchoolMain() {
 		try {
@@ -52,7 +58,7 @@ public class SchoolMain {
 			System.out.println("*****************************");
 
 			System.out.print("  번호 선택 :    ");
-			int num = scanner.nextInt();
+			num = scanner.nextInt();
 			
 			
 			if(num ==4) {
@@ -91,10 +97,8 @@ public class SchoolMain {
 			System.out.println("*****************************");
 			
 			System.out.print("  번호 선택 :  ");
-			int code = scanner.nextInt();
-			
-			String name;
-			String value;
+			code = scanner.nextInt();
+
 			
 			if(code == 1) {
 				System.out.println("**학생************************");
@@ -115,7 +119,7 @@ public class SchoolMain {
 				System.out.print("  부서 입력 : ");
 				value = scanner.next();
 			} else if(code == 4) {
-				break;
+				return;
 			} else {
 				System.out.println("  다시 입력하세요^^");
 				continue;
@@ -146,7 +150,7 @@ public class SchoolMain {
 // -----------------------------------------------	
 
 	public void selectArticle() {
-		getConnection();
+		
 		
 		while(true) {
 			System.out.println();
@@ -159,21 +163,52 @@ public class SchoolMain {
 			
 			System.out.print("  번호 선택 :  ");
 			int num = scanner.nextInt();
-			
-			String name;
-			String value;
+
 			if(num == 1 ) {
 				System.out.println("**이름 검색************************");
 				System.out.print("  검색할 이름 입력 : ");
 				name = scanner.next();
 			} else if(num == 2) {
 				System.out.println("**전체 검색************************");
+				name="";
 			} else if(num == 3 ) {
-				break;
+				return;
 			} else {
 				System.out.println("  다시 입력하세요^^");
 				continue;
 			}
+			
+			// SQL
+			
+			getConnection();
+			try {
+	
+				sql = "select * from school where name like ?";
+
+		
+				pstmt = con.prepareStatement(sql);
+	
+				pstmt.setString(1, "%"+name+"%");
+				rs = pstmt.executeQuery();
+				while(rs.next()) {
+					System.out.println(rs.getString("name") + "\t" + rs.getString("value") + "\t" + rs.getString("code"));
+				}					
+			
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} finally {
+				try {
+					if(rs != null) rs.close();
+					if(pstmt != null) pstmt.close();
+					if(con != null) con.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			
+			
+			
 		} // WHILE
 	} // METHOD: selectArticle()
 	
@@ -187,7 +222,7 @@ public class SchoolMain {
 		System.out.println("*****************************");
 		
 		System.out.println("삭제를 원하는 이름 입력 : ");
-		String name = scanner.next();
+		name = scanner.next();
 		
 		// SQL
 		try {
@@ -211,8 +246,6 @@ public class SchoolMain {
 // -----------------------------------------------	
 	public static void main(String[] args) {
 		new SchoolMain().menu();
-		
-		
 	}
 	
 }
