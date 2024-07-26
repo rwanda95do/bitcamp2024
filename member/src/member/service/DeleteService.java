@@ -28,14 +28,6 @@ public class DeleteService implements Member {
 			System.out.println("비밀번호를 틀렸습니다.");
 			return;
 		}
-		
-		/*
-		 * 아이디 입력
-		 * 비밀번호 입력
-		 * 비밀번호가 맞지 않으면 삭제 불가능
-		 * 
-		 * 비밀번호가 맞으면 삭제
-		 * */
 
 	}
 

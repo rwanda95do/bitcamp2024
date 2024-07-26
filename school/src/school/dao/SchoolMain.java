@@ -119,7 +119,7 @@ public class SchoolMain {
 				System.out.print("  부서 입력 : ");
 				value = scanner.next();
 			} else if(code == 4) {
-				return;
+				break;
 			} else {
 				System.out.println("  다시 입력하세요^^");
 				continue;
