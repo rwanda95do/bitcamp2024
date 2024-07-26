@@ -1,5 +1,6 @@
 package board.bean;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import lombok.Data;
@@ -20,7 +21,7 @@ public class BoardDTO {
 	private String name;
 	private String subject;
 	private String content;
-	private Date date; // String으로 잡고 쓸때 바꾸는게 나은가?
+	private String logtime; // String으로 잡고 쓸때 바꾸는게 나은가?
 	
 
 }

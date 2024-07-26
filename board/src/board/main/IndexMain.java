@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import board.service.Board;
 import board.service.BoardListService;
+import board.service.BoardViewService;
 import board.service.BoardWriteService;
 
 public class IndexMain {
@@ -34,8 +35,10 @@ public class IndexMain {
 			if(num == 4) break;
 			else if(num == 1) board= new BoardWriteService();//BoardWriteService;
 			else if(num == 2) board = new BoardListService();//BoardListService;
-			else if(num == 3) board = new BoardWriteService(); //BoardViewService
+			else if(num == 3) board = new BoardViewService(); //BoardViewService
 			else continue;
+			
+			board.execute();
 		}
 		
 		
