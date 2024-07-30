@@ -24,6 +24,8 @@ public class ProtocolClient {
 			br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			bw = new BufferedWriter((new OutputStreamWriter(socket.getOutputStream())));
 			
+			scan = new Scanner(System.in);
+			
 		} catch (UnknownHostException e) {
 			System.out.println("서버를 찾을 수 없습니다.(전화번호틀림)");
 			e.printStackTrace();
@@ -36,12 +38,13 @@ public class ProtocolClient {
 		
 		// ------------------
 		String message, line;
+		
 		try {
 			while(true) {
 			// 클라이언트 ->서버
 				System.out.println("[입장]  100:대화명 이라고 입력하세요");
-				System.out.println("[메시지] 200:대화명 이라고 입력하세요");
-				System.out.println("[퇴장]  300:대화명:메시지 이라고 입력하세요 \n");
+				System.out.println("[퇴장] 200:대화명 이라고 입력하세요");
+				System.out.println("[메시지]  300:대화명:메시지 이라고 입력하세요 \n");
 				
 				message = scan.nextLine();
 				
@@ -60,6 +63,7 @@ public class ProtocolClient {
 					bw.close();
 					socket.close();
 					
+					System.out.println("클라이언트 종료");
 					System.exit(0);
 				}
 			} // while

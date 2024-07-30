@@ -32,7 +32,9 @@ public class ProtocolServer {
 			System.exit(0);
 		}
 		
+	// --------------------------------------
 		String line;
+		
 		try {
 			while(true) {
 				// 클라이언트 -> 서버
@@ -51,6 +53,8 @@ public class ProtocolServer {
 					
 					bw.close();
 					br.close();
+					
+					System.out.println("서버 종료");
 					socket.close();
 					
 					System.exit(0);
